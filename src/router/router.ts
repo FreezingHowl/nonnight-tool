@@ -10,6 +10,10 @@ const routes = [
   {
     path: '/base-map',
     component: () => import('@/views/Map/Base.vue'),
+  },
+  {
+    path: '/base-util',
+    component: () => import('@/views/Util/Base.vue'),
   }
 ];
 
