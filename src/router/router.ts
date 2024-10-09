@@ -14,6 +14,10 @@ const routes = [
   {
     path: '/base-util',
     component: () => import('@/views/Util/Base.vue'),
+  },
+  {
+    path: '/base-util-video',
+    component: () => import('@/views/Util/Video.vue'),
   }
 ];
 
