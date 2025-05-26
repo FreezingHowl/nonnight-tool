@@ -1,0 +1,46 @@
+{
+  "name": "@nonNightTool/common",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "dev": "vite dev --port 8001 --force",
+    "build": "vite build",
+    "lint": "eslint . --ext .ts,.vue --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .ts,.vue --fix",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "ant-design-vue": "^4.2.6",
+    "axios": "^1.8.4",
+    "leaflet": "^1.9.4",
+    "vue": "^3.4.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "less": "^4.2.6",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.5",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  }
+}

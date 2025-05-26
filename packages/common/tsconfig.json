@@ -1,0 +1,17 @@
+{
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "allowImportingTsExtensions": true,
+    "target": "ES2020",
+    "types": ["vite/client", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

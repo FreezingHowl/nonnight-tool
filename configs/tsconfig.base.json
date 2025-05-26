@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@nonNightTool/common": ["../packages/common/src"],
+      "@nonNightTool/*": ["../packages/*/src"],
+      "vite-plugin-dts": ["node_modules/vite-plugin-dts"],
+      "@repo/*": ["packages/*/src"]
+    },
+    "types": ["vite/client"]
+  },
+  "exclude": ["node_modules", "dist"]
+}

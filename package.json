@@ -1,46 +1,34 @@
 {
-  "name": "tht-tool",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "lint": "eslint \"src/**/*.{js,jsx,vue}\" --fix"
-  },
-  "dependencies": {
-    "element-plus": "^2.8.4",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.24.0",
-    "flv.js": "^1.6.2",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
-    "pinia": "^2.1.7",
-    "vue": "^3.3.4",
-    "vue-router": "^4.0.13"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "sass": "^1.69.5",
-    "sass-loader": "^13.3.2",
-    "typescript": "^5.0.2",
-    "unplugin-auto-import": "^0.17.5",
-    "unplugin-vue-components": "^0.26.0",
-    "vite": "^4.4.5",
-    "vue-tsc": "^1.8.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,vue}": [
-      "eslint --fix",
-      "git add"
-    ]
-  }
+	"name": "nonNightTool",
+	"version": "0.0.1",
+	"description": "地质灾害",
+	"type": "module",
+	"scripts": {
+		"dev": "turbo run dev --parallel",
+		"build": "turbo run build",
+		"test": "turbo run test",
+		"lint": "eslint . --ext .ts,.vue --ignore-path .gitignore",
+		"lint:fix": "eslint . --ext .ts,.vue --fix",
+		"type-check": "vue-tsc --noEmit"
+	},
+	"packageManager": "pnpm@10.7.1",
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^5.2.3",
+		"eslint-plugin-sonarjs": "^3.0.2",
+		"turbo": "latest",
+		"typescript": "^5.8.3",
+		"vite": "^6.2.5",
+		"vue": "^3.5.13"
+	},
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.29.1",
+		"@typescript-eslint/parser": "^8.29.1",
+		"eslint": "^9.24.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-import-resolver-typescript": "^4.3.2",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-prettier": "^5.2.6",
+		"eslint-plugin-vue": "^10.0.0",
+		"prettier": "^3.5.3"
+	}
 }

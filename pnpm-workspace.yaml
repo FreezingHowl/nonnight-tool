@@ -1,0 +1,17 @@
+# 定义工作区范围
+packages:
+  - 'packages/*'
+  - 'configs'   # 共享配置目录
+  - 'scripts'   # 迁移脚本目录
+
+# 依赖提升规则
+nodeLinker: pnpm
+publicHoistPattern:
+  - 'eslint*'             # 提升所有 eslint 相关依赖
+  - '@typescript-eslint'  # 提升所有 @typescript-eslint 相关依赖
+  - 'prettier*'           # 提升所有 prettier 相关依赖
+  - '@types/*'            # 提升所有类型定义
+  - 'vite*'               # 提升所有 Vite 核心及插件
+  - '@vitejs/*'           # 包含 Vite 官方插件
+  - 'vue*'                # 提升 Vue 生态全家桶
+  - '@vue/*'              # 包含 Vue 官方工具链
